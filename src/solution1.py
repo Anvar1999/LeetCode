@@ -1,9 +1,9 @@
+from pip import List
+
+
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-                 
-        for List in nums:
-            
-            if (target - List) in nums:
-                index = nums.index(List) 
-                output = list.append(index)
-            return output
+        for i in range(len(nums)):
+            for j in range(i + 1, len(nums)):
+                if nums[j] == target - nums[i]:
+                    return [i, j]
